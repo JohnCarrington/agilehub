@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgileHub Admin | Courses & Bookings</title>
+  <link rel="icon" href="agilehub-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="agilehub-logo.png" alt="AgileHub logo" /><span class="brand-text">Admin</span></a>
+      <div class="nav-links"><a href="index.html">Website</a></div>
+    </nav>
+  </header>
+
+  <main class="section admin-page">
+    <div class="section-heading">
+      <p class="eyebrow">Admin panel</p>
+      <h1>Edit courses, dates and prices without coding.</h1>
+      <p>Use the password from your server environment variable <strong>ADMIN_PASSWORD</strong>.</p>
+    </div>
+
+    <section class="admin-login card">
+      <label>Admin password
+        <input id="adminPassword" type="password" placeholder="Enter admin password" />
+      </label>
+      <button id="loadAdmin" class="btn primary">Load admin panel</button>
+      <p id="adminStatus" class="small"></p>
+    </section>
+
+    <section id="adminTools" hidden>
+      <div class="admin-actions">
+        <button id="addCourse" class="btn secondary">Add course</button>
+        <button id="saveCourses" class="btn primary">Save course changes</button>
+      </div>
+      <div id="courseEditor" class="admin-editor"></div>
+
+      <div class="section-heading admin-bookings-heading">
+        <p class="eyebrow">Bookings</p>
+        <h2>Paid bookings received from Stripe.</h2>
+      </div>
+      <div id="bookingList" class="booking-list"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

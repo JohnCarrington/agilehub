@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgileHub Courses | Agile, Scrum & Product Training</title>
+  <meta name="description" content="Book AgileHub courses delivered in person, online, or as self-paced eLearning." />
+  <meta property="og:title" content="AgileHub Training Courses" />
+  <meta property="og:description" content="Agile, Scrum and Product training delivered in person, online or through self-paced eLearning." />
+  <meta property="og:url" content="https://agilehub.co" />
+  <link rel="icon" href="agilehub-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="AgileHub home">
+        <img src="agilehub-logo.png" alt="AgileHub logo" />
+        <span class="brand-text">AgileHub</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="#courses">Courses</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#booking">Book</a>
+        <a href="#faq">FAQ</a>
+        <a href="admin.html">Admin</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Agile, Scrum & Product Training</p>
+        <h1>Build confident Agile teams with practical, outcome-focused courses.</h1>
+        <p class="hero-copy">Choose classroom training, live online workshops, or self-paced eLearning. Select your preferred date, reserve your place, and complete payment securely.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#booking">Book a course</a>
+          <a class="btn secondary" href="#courses">View courses</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="agilehub-logo.png" alt="" aria-hidden="true" />
+        <h2>Popular next course</h2>
+        <p>Agile Foundation</p>
+        <strong>From £395 + VAT</strong>
+        <span>Online · 12 June 2026</span>
+      </div>
+    </section>
+
+    <section class="section logos">
+      <p>Trusted training for teams moving faster, reducing waste, and improving delivery.</p>
+    </section>
+
+    <section id="delivery" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Flexible delivery</p>
+        <h2>Learn in the format that works for you.</h2>
+      </div>
+      <div class="cards three">
+        <article class="card">
+          <h3>In person</h3>
+          <p>Interactive classroom training with group exercises, coaching, and real-world Agile simulations.</p>
+        </article>
+        <article class="card">
+          <h3>Online</h3>
+          <p>Live instructor-led courses delivered remotely with breakout activities and practical collaboration.</p>
+        </article>
+        <article class="card">
+          <h3>Self-paced eLearning</h3>
+          <p>Start instantly and progress at your own pace with guided modules, quizzes, and downloadable resources.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="courses" class="section muted">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Courses</p>
+          <h2>Choose your AgileHub course.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Course filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="In person">In person</button>
+          <button class="filter" data-filter="Online">Online</button>
+          <button class="filter" data-filter="eLearning">eLearning</button>
+        </div>
+      </div>
+      <div id="courseGrid" class="cards course-grid"></div>
+    </section>
+
+    <section id="booking" class="section booking-section">
+      <div class="section-heading">
+        <p class="eyebrow">Booking</p>
+        <h2>Reserve your place.</h2>
+        <p>Select a course, choose a delivery option and date, then proceed to secure payment.</p>
+      </div>
+
+      <div class="booking-layout">
+        <form id="bookingForm" class="booking-form">
+          <label>
+            Course
+            <select id="courseSelect" required></select>
+          </label>
+
+          <label>
+            Delivery method
+            <select id="deliverySelect" required></select>
+          </label>
+
+          <label class="date-field">
+            Available date
+            <input id="dateDisplay" type="text" readonly required placeholder="Select a course date" aria-haspopup="dialog" aria-expanded="false" />
+            <select id="dateSelect" required hidden></select>
+            <div id="calendarPopup" class="calendar-popup" hidden aria-label="Available course dates calendar">
+              <div class="calendar-header">
+                <button type="button" id="calendarPrev" aria-label="Previous month">‹</button>
+                <strong id="calendarMonth">Month YYYY</strong>
+                <button type="button" id="calendarNext" aria-label="Next month">›</button>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div id="calendarGrid" class="calendar-grid"></div>
+              <p id="calendarHint" class="calendar-hint">Only highlighted dates are available for this course.</p>
+            </div>
+          </label>
+
+          <div class="two-col">
+            <label>
+              Places
+              <input id="placesInput" type="number" min="1" max="20" value="1" required />
+            </label>
+            <label>
+              VAT
+              <select id="vatSelect">
+                <option value="0.2">Add VAT at 20%</option>
+                <option value="0">No VAT</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="two-col">
+            <label>
+              Full name
+              <input id="nameInput" type="text" placeholder="Jane Smith" required />
+            </label>
+            <label>
+              Email
+              <input id="emailInput" type="email" placeholder="jane@example.com" required />
+            </label>
+          </div>
+
+          <label>
+            Company / team name
+            <input id="companyInput" type="text" placeholder="Optional" />
+          </label>
+
+          <button class="btn primary full" type="submit">Continue to payment</button>
+          <p class="small">Payments are handled securely by Stripe Checkout.</p>
+        </form>
+
+        <aside class="summary-card">
+          <h3>Booking summary</h3>
+          <dl>
+            <div><dt>Course</dt><dd id="summaryCourse">—</dd></div>
+            <div><dt>Delivery</dt><dd id="summaryDelivery">—</dd></div>
+            <div><dt>Date</dt><dd id="summaryDate">—</dd></div>
+            <div><dt>Places</dt><dd id="summaryPlaces">1</dd></div>
+            <div><dt>Subtotal</dt><dd id="summarySubtotal">£0</dd></div>
+            <div><dt>VAT</dt><dd id="summaryVat">£0</dd></div>
+            <div class="total"><dt>Total</dt><dd id="summaryTotal">£0</dd></div>
+          </dl>
+          <div id="paymentNotice" class="payment-notice" hidden></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Can we book a private team course?</summary>
+          <p>Yes. Select the closest course and use the company field, or contact AgileHub for a tailored group booking.</p>
+        </details>
+        <details>
+          <summary>How does eLearning access work?</summary>
+          <p>Self-paced eLearning starts instantly after payment confirmation and can include completion certificates.</p>
+        </details>
+        <details>
+          <summary>Is payment secure?</summary>
+          <p>The production version should use a PCI-compliant payment provider such as Stripe Checkout, PayPal, or GoCardless.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="agilehub-logo.png" alt="AgileHub logo" />
+      <div>
+        <strong>AgileHub Ltd</strong>
+        <p>89 High Street, Tunbridge Wells, Kent, TN1 1YG</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="tel:08000485645">0800 048 5645</a>
+      <a href="mailto:info@agilehub.co">info@agilehub.co</a>
+      <a href="https://agilehub.co">agilehub.co</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

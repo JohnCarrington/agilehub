@@ -1,0 +1,65 @@
+[
+  {
+    "id": "agile-foundation",
+    "title": "Agile Foundation",
+    "description": "A practical introduction to Agile values, principles, roles, ceremonies, and delivery habits.",
+    "price": 395,
+    "deliveries": {
+      "In person": ["2026-06-19", "2026-07-17", "2026-09-11"],
+      "Online": ["2026-06-12", "2026-07-10", "2026-08-14"],
+      "eLearning": ["Start immediately"]
+    }
+  },
+  {
+    "id": "scrum-master",
+    "title": "Scrum Master Practitioner",
+    "description": "Develop the skills to facilitate Scrum events, remove blockers, coach teams, and improve flow.",
+    "price": 795,
+    "deliveries": {
+      "In person": ["2026-06-25", "2026-08-06"],
+      "Online": ["2026-06-18", "2026-07-23", "2026-09-03"],
+      "eLearning": ["Start immediately"]
+    }
+  },
+  {
+    "id": "product-owner",
+    "title": "Product Owner Essentials",
+    "description": "Learn product discovery, backlog management, prioritisation, stakeholder alignment, and value delivery.",
+    "price": 695,
+    "deliveries": {
+      "In person": ["2026-07-02", "2026-09-17"],
+      "Online": ["2026-06-26", "2026-08-21"],
+      "eLearning": ["Start immediately"]
+    }
+  },
+  {
+    "id": "agile-leadership",
+    "title": "Agile Leadership",
+    "description": "For managers and leaders who want to create empowered teams, better governance, and measurable outcomes.",
+    "price": 895,
+    "deliveries": {
+      "In person": ["2026-07-09", "2026-10-01"],
+      "Online": ["2026-07-16", "2026-09-24"]
+    }
+  },
+  {
+    "id": "kanban-flow",
+    "title": "Kanban & Flow Metrics",
+    "description": "Visualise work, reduce bottlenecks, use flow metrics, and improve predictability without overcomplication.",
+    "price": 595,
+    "deliveries": {
+      "Online": ["2026-06-30", "2026-08-28"],
+      "eLearning": ["Start immediately"]
+    }
+  },
+  {
+    "id": "scaled-agile",
+    "title": "Scaling Agile Delivery",
+    "description": "Coordinate multiple teams, manage dependencies, improve planning, and keep strategy connected to delivery.",
+    "price": 995,
+    "deliveries": {
+      "In person": ["2026-09-10"],
+      "Online": ["2026-07-31", "2026-10-16"]
+    }
+  }
+]
